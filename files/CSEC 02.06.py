@@ -16,9 +16,12 @@ def extract_after_last_letter(s):
 
 input['answer'] = input['Customers & Orders'].apply(extract_after_last_letter)
 
-print(input['answer'][0])
-print(test['Last Correct Order'][0])
-
-# merge two table column way
 print(input.merge(test, left_index=True, right_index=True))
 
+#                     Customers & Orders  answer Last Correct Order
+# 0                  Emily15423Jake56243   56243              56243
+# 1       Adrian Order not yet confirmed
+# 2                           Amani#2546   #2546              #2546
+# 3   25698 -To confirm if correct Order
+# 4        Sean235Tyler58614Manito015236  015236             015236
+# 5  Orders #564 and #5862 were rejected
